@@ -1,32 +1,33 @@
-# React + TypeScript + Vite
+# 🎮 GameShelf
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Une application web moderne de gestion et d'exploration de votre bibliothèque de jeux vidéo, développée avec **React 19**, **TypeScript** et **Vite**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Stack Technique
 
-## React Compiler
+- **Framework UI :** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool :** [Vite 8](https://vitejs.dev/)
+- **Gestion d'État (Client State) :** [Zustand](https://zustand-demo.pmnd.rs/) (Store réactif ultra-léger & performant)
+- **Formulaires & Validation :** [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) (Validation de schémas type-safe)
+- **Notifications (Toast) :** [Sonner](https://sonner.emilkow.com/) (Toaster rapide & élégant)
+- **Routage :** [React Router 8](https://reactrouter.com/)
+- **Internationalisation :** [i18next](https://www.i18next.com/) + `react-i18next`
+- **Qualité & Formatage :** [Oxlint](https://oxc.rs/) (Linter Rust ultra-rapide) + [Prettier](https://prettier.io/)
+- **Automation Git :** [Husky](https://typicode.github.io/husky/) + [lint-staged](https://github.com/lint-staged/lint-staged)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🚀 Démarrage Rapide
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### 1. Installation des dépendances
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 2. Lancer le serveur de développement
+
+```bash
+npm run dev
+```
