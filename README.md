@@ -8,9 +8,10 @@ Une application web moderne de gestion et d'exploration de votre bibliothèque d
 
 - **Framework UI :** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - **Build Tool :** [Vite 8](https://vitejs.dev/)
-- **Gestion d'État (Client State) :** [Zustand](https://zustand-demo.pmnd.rs/) (Store réactif ultra-léger & performant)
-- **Formulaires & Validation :** [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) (Validation de schémas type-safe)
-- **Notifications (Toast) :** [Sonner](https://sonner.emilkow.com/) (Toaster rapide & élégant)
+- **Design System / UI :** [Material UI (MUI)](https://mui.com/) + Emotion
+- **Gestion d'État (Reactive State) :** [Elf.js](https://ngneat.github.io/elf/) (Store réactif basé sur RxJS)
+- **Formulaires & Validation :** [React Hook Form](https://react-hook-form.com/) + [Yup](https://github.com/jquense/yup) (Validation de schémas type-safe)
+- **Notifications (Toast) :** [Notistack](https://notistack.com/) (Toaster empilable intégré à Material UI)
 - **Routage :** [React Router 8](https://reactrouter.com/)
 - **Internationalisation :** [i18next](https://www.i18next.com/) + `react-i18next`
 - **Qualité & Formatage :** [Oxlint](https://oxc.rs/) (Linter Rust ultra-rapide) + [Prettier](https://prettier.io/)
@@ -18,16 +19,14 @@ Une application web moderne de gestion et d'exploration de votre bibliothèque d
 
 ---
 
-## 🚀 Démarrage Rapide
+## 🏗️ Architecture du Projet
 
-### 1. Installation des dépendances
+L'application suit les principes de la **Clean Architecture / DDD (Domain-Driven Design)** pour assurer une séparation stricte des responsabilités :
 
-```bash
-npm install
-```
-
-### 2. Lancer le serveur de développement
-
-```bash
-npm run dev
+```text
+src/
+├── assets/         # Ressources statiques (images, médias)
+├── data/           # Implémentations techniques (Repositories API, Stores Elf, DTOs)
+├── domain/         # Cœur métier pur (Entities, Interfaces de Repositories, Validators)
+└── ui/             # Couche de présentation React (Components, Features, Pages, Theme MUI)
 ```
