@@ -1,10 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 
-createRoot(document.getElementById('root')!).render(
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/jetbrains-mono/400.css";
+
+import { theme } from "./ui/theme";
+import App from "./App.tsx";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
   </StrictMode>,
-)
+);

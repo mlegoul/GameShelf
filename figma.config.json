@@ -1,0 +1,12 @@
+{
+  "codeConnect": {
+    "parser": "react",
+    "include": ["src/ui/components/**/*.tsx"],
+    "exclude": [
+      "node_modules/**",
+      "src/stories/**",
+      "dist/**",
+      "src/**/*.stories.tsx"
+    ]
+  }
+}

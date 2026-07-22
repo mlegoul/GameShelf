@@ -28,5 +28,16 @@ src/
 ├── assets/         # Ressources statiques (images, médias)
 ├── data/           # Implémentations techniques (Repositories API, Stores Elf, DTOs)
 ├── domain/         # Cœur métier pur (Entities, Interfaces de Repositories, Validators)
-└── ui/             # Couche de présentation React (Components, Features, Pages, Theme MUI)
+└── ui/             # Couche de présentation React
+    ├── components/ # Design system (un dossier par composant : .tsx, story, Code Connect)
+    ├── features/   # Fonctionnalités métier
+    ├── pages/      # Écrans routés
+    ├── storybook/  # Helpers Storybook (liaison Figma)
+    └── theme/      # Tokens et thème MUI dérivés de Figma
 ```
+
+---
+
+## 📚 Documentation
+
+- [`docs/design-system.md`](docs/design-system.md) — guide de liaison Figma ↔ Storybook (tokens, Code Connect, publication).
